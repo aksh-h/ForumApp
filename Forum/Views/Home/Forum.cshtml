@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Forum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/AppScript/Forum.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<h2>Forum</h2>
+
+
+<div class="col-sm-12" id="questions">
+    <input  type="hidden" id="hiddenQID"/>
+    <input  type="hidden" id="hiddenReplyID"/>
+</div>
+
+<!-- Modal -->
+<div class="modal fade modal-fade-in-scale-up" id="replyModalLabel" aria-hidden="true" aria-labelledby="replyModalLabel" role="dialog" tabindex="-1" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-capitalize" id="Subject">Reply</h5>
+            </div>
+            <div class="modal-body">
+                <textarea rows="8" cols="80" id="ReplyText"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning  btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="Replybutton">Reply</button>
+                <button type="button" class="btn btn-primary d-none" id="updateReplybutton">Update Reply</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .question {
+        background-color: #e9dcdc;
+        min-height: 50px;
+        min-width: 100%;
+        max-height: 50%;
+        border: 1px solid black;
+        padding: 14px;
+        margin: 2px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        overflow-x: scroll hidden;
+    }
+
+    .replyBg {
+        background-color: #e8f8f6;
+        min-height: 50px;
+        max-height: 50%;
+        min-width: 100%;
+        border: 1px solid black;
+        padding: 14px;
+        margin: 2px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        overflow: scroll;
+    }
+
+    .replyRight {
+        float: right;
+        padding: 4px;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .d-block {
+        display: block;
+    }
+</style>

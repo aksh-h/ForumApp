@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "AskQuestions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/AppScript/PostQuestion.js"></script>
+<link href="~/fonts/glyphicons/glyphicons.css" rel="stylesheet" />
+<h2>Ask a Questions</h2>
+<div class="col-sm-12">
+
+    <input type="hidden" id="hiddenEditID" />
+    <label>Question  *:</label>
+    <input type="text" id="question" class="form-control clear" />
+
+    <label>Discription:</label>
+    <textarea rows="5" cols="6" class="form-control clear" id="discription"></textarea>
+    <br />
+    <button type="button" class="btn btn-sm btn-primary" id="postQuestion">Post</button>
+    <button type="button" class="btn btn-sm btn-primary d-none" id="updateQuestion">Update</button>
+    <button type="button" class="btn btn-sm btn-default btn-sm d-none" id="cancelButton">Cancel</button>
+    @*<div id="" class="question">
+            <button type="button" class="glyphicon glyphicon-pencil btn btn-warning" style="float:right; margin:2px"></button>
+            <button type="button" class="glyphicon glyphicon-trash btn btn-danger" style="float:right; margin:2px;"></button>
+        </div>*@
+    <div id="questionList">
+    </div>
+</div>
+
+<div class="row">
+</div>
+
+<style type="text/css">
+    .question {
+        background-color: #e9dcdc;
+        min-height: 50px;
+        min-width: 100%;
+        max-height: 50%;
+        border: 1px solid black;
+        padding: 14px;
+        margin: 2px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        overflow-x: scroll hidden;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .d-block {
+        display: block;
+    }
+</style>
